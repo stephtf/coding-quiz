@@ -1,0 +1,33 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+body { 
+    text-align: center;
+    min-width: 25em;
+}
+
+h1 {
+    font-family: 'Shizuru', cursive;
+    margin-top: 200px;
+    font-size: 50px;
+}
+
+p {
+    margin-top: 30px;
+}
+
+button {
+    margin-top: 25px;
+    background-color: pink;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
