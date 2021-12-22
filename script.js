@@ -7,6 +7,14 @@ var startTitle = document.querySelector("h1");
 var startPara = document.querySelector("p");
 var questOne = document.getElementById("question-one");
 var questOneAnswers = document.getElementsByClassName("answers-one");
+var questTWo = document.getElementById("question-two");
+var questTwoAnswers = document.getElementsByClassName("answers-two");
+var questThree = document.getElementById("question-three");
+var questThreeAnswers = document.getElementsByClassName("answers-three");
+var questFour = document.getElementById("question-four");
+var questFourAnswers = document.getElementsByClassName("answers-four");
+var questFive = document.getElementById("question-five");
+var questFiveAnswers = document.getElementsByClassName("answers-five");
 
 var youAreCorrect = document.createElement("p");
 youAreCorrect.textContent = "you are correct!!";
@@ -56,7 +64,15 @@ function setTime() {
 function answeredRight() {
     body.appendChild(youAreCorrect);
 }
-questOneAnswers[2].addEventListener("click", answeredRight);
+questOneAnswers[2].addEventListener("click", answeredRight("one","two"));
+
+questTwoAnswers[2].addEventListener("click", answeredRight("two","three"));
+
+questThreeAnswers[3].addEventListener("click", answeredRight("three","four"));
+
+questFourAnswers[0].addEventListener("click", answeredRight("four","five"));
+
+questFiveAnswers[2].addEventListener("click", answeredRight("five","six"));
 
 
 // part 4 - i needed to create a timer to remove the text that gets added when the user answers questions!
@@ -81,7 +97,7 @@ function answeredWrong() {
       secondTime();
 } 
 
-function answeredRight() { 
+function answeredRight(current, next) { 
   body.appendChild(youAreCorrect); 
   youAreCorrect.style.display="flex";
   var second = 1
@@ -90,9 +106,23 @@ function answeredRight() {
         second--;
 
         if(second === 0) {
+          //If question is answered right, we 
+          //(1) Clear the timer
           clearInterval(timerInterval1);
+
+          //(2) Clear the current set of questions and the text that displays the user got the question right
           youAreCorrect.style.display = "none";
-          youAreIncorrect.style.display = "none";
+
+          movingOn(current, next);
+
+          // questOne.style.display = "none";
+          // questOneAnswers[0].style.display = "none";
+          // questOneAnswers[1].style.display = "none";
+          // questOneAnswers[2].style.display = "none";
+          // questOneAnswers[3].style.display = "none";
+
+          // (3) Display the next set of questions
+           
         }
       }, 1000);
     }
@@ -103,9 +133,28 @@ questOneAnswers[0].addEventListener("click", answeredWrong);
 questOneAnswers[1].addEventListener("click", answeredWrong);
 questOneAnswers[3].addEventListener("click", answeredWrong);
 
+
 // part 5 - moving on to the next question 
 
-// here i gotta figure out how to move the user to the next question after they answer either correct or incorrectly
+  // hiding current question and displaying next one
+ function movingOn(current, next) {
+    var currentQ = document.getElementById("question-" + current);
+    currentQ.style.display = "none"; 
+    var nextQ = document.getElementById("question-" + next);
+    nextQ.style.display = "flex";
+
+  // hiding current answers and displaying next ones
+    var currentAnswers = document.getElementsByClassName("answers-" + current); 
+    for (i=0; i < currentAnswers.length; i++) {
+      currentAnswers[i].style.display = "none"; 
+    }
+
+    var nextAns = document.getElementsByClassName("answers-" + next); 
+    for (i=0; i < nextAns.length; i++) {
+      nextAns[i].style.display = "flex"; 
+    }
+ }
+
 
 
 

@@ -7,7 +7,7 @@
 body { 
     text-align: center;
     min-width: 25em;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 
@@ -40,7 +40,7 @@ button:hover {
 
 /* part 2 */
 
-#question-one {
+.questions {
     font-family: 'Shizuru', cursive;
     margin-top: 150px;
     font-size: 25px;
@@ -48,14 +48,13 @@ button:hover {
     display: none;
 }
 
-.answers-one {
+.answers {
     background-color: rgb(147, 198, 213);
     box-shadow: 1px 1px 5px grey;
     border-radius: 20px;
     font-weight: bold;
     font-size: 15px;
     list-style: none;
-    display: flex;
     margin-left: 50px;
     margin-bottom: 20px;
     display: none;
