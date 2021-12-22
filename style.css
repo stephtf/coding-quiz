@@ -1,13 +1,17 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 body { 
     text-align: center;
     min-width: 25em;
+    font-size: 20px;
 }
+
+
+/* part 1  */
 
 h1 {
     font-family: 'Shizuru', cursive;
@@ -19,9 +23,10 @@ p {
     margin-top: 30px;
 }
 
-button {
+#start-button {
     margin-top: 25px;
     background-color: pink;
+    box-shadow: 1px 1px 5px grey;
     border-radius: 20px;
     font-weight: bold;
     font-size: 20px;
@@ -29,5 +34,29 @@ button {
 
 button:hover {
     cursor: pointer;
+
 }
 
+
+/* part 2 */
+
+#question-one {
+    font-family: 'Shizuru', cursive;
+    margin-top: 200px;
+    font-size: 25px;
+    white-space: nowrap;
+    display: none;
+}
+
+.answers-one {
+    background-color: rgb(147, 198, 213);
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    margin-left: 130px;
+    margin-bottom: 20px;
+    display: none;
+}
