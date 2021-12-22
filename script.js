@@ -7,7 +7,7 @@ var startTitle = document.querySelector("h1");
 var startPara = document.querySelector("p");
 var questOne = document.getElementById("question-one");
 var questOneAnswers = document.getElementsByClassName("answers-one");
-var questTWo = document.getElementById("question-two");
+var questTwo = document.getElementById("question-two");
 var questTwoAnswers = document.getElementsByClassName("answers-two");
 var questThree = document.getElementById("question-three");
 var questThreeAnswers = document.getElementsByClassName("answers-three");
@@ -61,18 +61,16 @@ function setTime() {
 
 // part 3 - when questions are answered (what happens next?!)
 
-function answeredRight() {
-    body.appendChild(youAreCorrect);
-}
-questOneAnswers[2].addEventListener("click", answeredRight("one","two"));
 
-questTwoAnswers[2].addEventListener("click", answeredRight("two","three"));
+questOneAnswers[2].addEventListener("click", function() {answeredRight("one","two")});
 
-questThreeAnswers[3].addEventListener("click", answeredRight("three","four"));
+questTwoAnswers[2].addEventListener("click", function() {answeredRight("two","three")});
 
-questFourAnswers[0].addEventListener("click", answeredRight("four","five"));
+questThreeAnswers[3].addEventListener("click", function() {answeredRight("three","four")});
 
-questFiveAnswers[2].addEventListener("click", answeredRight("five","six"));
+questFourAnswers[0].addEventListener("click", function() {answeredRight("four","five")});
+
+questFiveAnswers[2].addEventListener("click", function() {answeredRight("five","one")});
 
 
 // part 4 - i needed to create a timer to remove the text that gets added when the user answers questions!
@@ -127,11 +125,28 @@ function answeredRight(current, next) {
       }, 1000);
     }
     secondTime();
+    
 }
 
 questOneAnswers[0].addEventListener("click", answeredWrong);
 questOneAnswers[1].addEventListener("click", answeredWrong);
 questOneAnswers[3].addEventListener("click", answeredWrong);
+
+questTwoAnswers[0].addEventListener("click", answeredWrong);
+questTwoAnswers[1].addEventListener("click", answeredWrong);
+questTwoAnswers[3].addEventListener("click", answeredWrong);
+
+questThreeAnswers[0].addEventListener("click", answeredWrong);
+questThreeAnswers[1].addEventListener("click", answeredWrong);
+questThreeAnswers[2].addEventListener("click", answeredWrong);
+
+questFourAnswers[1].addEventListener("click", answeredWrong);
+questFourAnswers[2].addEventListener("click", answeredWrong);
+questFourAnswers[3].addEventListener("click", answeredWrong);
+
+questFiveAnswers[0].addEventListener("click", answeredWrong);
+questFiveAnswers[1].addEventListener("click", answeredWrong);
+questFiveAnswers[3].addEventListener("click", answeredWrong);
 
 
 // part 5 - moving on to the next question 
