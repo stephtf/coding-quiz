@@ -39,10 +39,12 @@ var timeEl = document.querySelector(".time");
 function setTime() {
     var timerInterval = setInterval(function() {
       secondsLeft--;
-      timeEl.textContent = "you have " + secondsLeft + " left";
+      timeEl.textContent = "You have " + secondsLeft + " left ";
   
       if(secondsLeft === 0) {
         clearInterval(timerInterval);
+        timeEl.textContent = "Game Over! Thanks for playing";
+
         sendMessage();
       }
     }, 1000);
