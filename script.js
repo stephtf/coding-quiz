@@ -70,7 +70,7 @@ questThreeAnswers[3].addEventListener("click", function() {answeredRight("three"
 
 questFourAnswers[0].addEventListener("click", function() {answeredRight("four","five")});
 
-questFiveAnswers[2].addEventListener("click", function() {answeredRight("five","one")});
+questFiveAnswers[2].addEventListener("click", function() {answeredRight("five","six")});
 
 
 // part 4 - i needed to create a timer to remove the text that gets added when the user answers questions!
