@@ -1,12 +1,19 @@
-# homework-4-code-quiz
+# Coding Quiz
 
-Project Name: Code Quiz 
+## Link 
+https://stephtf.github.io/coding-quiz
 
-Description: 
-    This is the fourth homework assignment for the coding bootcamp. We were tasked with creating a coding quiz. There are five questions on my quiz. The user can test their knowledge of basic coding concepts and when they select the correct answer a message pops up saying "you are correct!!" When an incorrect answer is selected, a message says "you are incorrect. try again!" and 10 seconds are deducted from the timer. The timer is set to 100 seconds. 
+## Description
+    This project is a fun quiz game that tests your knowledge of basic coding concepts! To begin the game, you click on the "start game" button, and you are presented with the first question. Simple enough! But wait, there's a timer. You have only 100 seconds to answer all of the questions. If you get an answer wrong, 10 seconds are deducted from the clock. Don't worry, you can keep on guessing until you get the right answer!
 
-    (I was not able to complete all of the requirements of this assignment. I am still figuring out how to save user scores. I plan to resubmit this assignment later when I figure out how to do it!) 
 
-Dear Grader: 
-    Thank you for grading my homework! I appreciate your comments and suggestions for how to improve this project. 
+## Technologies
 
+```
+HTML
+CSS
+javascript 
+ ```
+
+## Contact 
+If you have any questions about the repo, open an issue or contact me directly at stfajardo@gmail.com. You can find more of my work at [stephtf](https://github.com/stephtf/).
